@@ -1,0 +1,46 @@
+<div class="card">
+    <div class="card-body">
+    <table class="table  table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Mobile Number</th>
+                <th>Date  Joined</th>
+                <th>Groups Joined</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>          
+            
+            <tr *ngFor="let user of users; index as i">
+                <th>{{i + 1}}</th>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.address}}</td>
+                <td>{{user.mobile_number}}</td>
+                <td>{{user.timestamp | date}}</td>
+                <th>{{user.groups.length}}</th>
+                <td><button class="btn btn-primary" (click)="deleteUser(user)">delete user</button></td>
+            </tr>
+           
+           
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Mobile</th>
+                <th>Date  Joined</th>
+                <th>Groups Joined</th>
+                <th>Actions</th>
+
+            </tr>
+        </tfoot>
+    </table>
+</div>
+</div>

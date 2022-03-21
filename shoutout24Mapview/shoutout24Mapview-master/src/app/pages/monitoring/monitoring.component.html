@@ -1,0 +1,33 @@
+<!-- <div #mapContainer id="map"></div> -->
+<agm-map 
+
+       [latitude]='lat' 
+
+       [longitude]='long'
+
+       [zoom]='zoom'
+
+       >
+
+       <agm-marker 
+            *ngFor="let marker of location ; index as i "
+
+            [latitude]="marker.latitude" 
+
+              [longitude]="marker.longitude">    
+
+                  <agm-info-window #infoWindow>
+                      <ul>
+                          <li>{{ marker.time }}</li>
+                          <li>
+                              <a href="https://www.google.com/maps/dir/?api=1&destination={{marker.latitude}},{{marker.longitude}}" target="_blank"><button>Open On Map</button></a>
+                          </li>
+                      </ul>                 
+                      
+
+                </agm-info-window>             
+
+        </agm-marker>
+        
+    </agm-map>
+    

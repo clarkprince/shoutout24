@@ -1,0 +1,17 @@
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    padding: 10px;
+    /* // height: 700px; */
+  }
+  
+  .wrapper {
+    padding-top: 25vh;
+    /* background-image: url("assets/img/angular2-logo.png") !important; */
+    background-repeat: no-repeat;
+  }
+  .btn {
+    background-color: #38006b;
+  }
+  

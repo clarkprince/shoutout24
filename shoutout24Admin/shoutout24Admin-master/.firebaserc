@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "amazing-badge-301608"
+  },
+  "targets": {
+    "amazing-badge-301608": {
+      "hosting": {
+        "admin": [
+          "shoutout-admin-dashboard"
+        ]
+      }
+    }
+  }
+}

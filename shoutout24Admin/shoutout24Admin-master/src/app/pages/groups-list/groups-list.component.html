@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="card-body">
+        <table  class="table  table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Group Name</th>
+                    <th>Group Description</th>
+                    <th>Created By</th>
+                    <th>Total Members</th>
+                    <th>Date Formed</th>
+                    <!-- <th>Action</th> -->
+                </tr>
+            </thead>
+            <tbody>          
+                
+                <tr *ngFor="let group of groups;  index as i">
+                    <th>{{i + 1}}</th>
+                    <td>{{group.groupName | titlecase}}</td>
+                    <td>{{group.description}}</td>
+                    <td>{{group.admin | titlecase}}</td>
+                    <th>{{group.members.length}}</th>
+                    <td>{{group.timestamp | date}}</td>
+                    <!-- <td><button class="btn btn-secondary">actions</button></td> -->
+                </tr>
+               
+               
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>#</th>
+                    <th>Group Name</th>
+                    <th>Group Description</th>
+                    <th>Created By</th>
+                    <th>Total Members</th>
+                    <th>Date Created</th>
+                    <!-- <th>Actions</th> -->
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+</div>
